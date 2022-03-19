@@ -22,6 +22,10 @@
                                 <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </jet-nav-link>
+                                <!-- .* permite poner como active cualquier ruta que contenga contacts -->
+                                <jet-nav-link :href="route('contacts.index')" :active="route().current('contacts.*')">
+                                    Contacts
+                                </jet-nav-link>
                             </div>
                         </div>
 

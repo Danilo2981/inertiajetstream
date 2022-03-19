@@ -16,7 +16,12 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Contacts/Index');
+        // Pasando datos para la vista, crea la variable
+        $contacts = Contact::all();
+
+        // pasa los datos como segundo parametro con compact que crea un array de lo obtenido del modelo
+        return Inertia::render('Contacts/Index', compact('contacts'));
+        // estos datos tienen que pasarse a la vista Vue como props, y tapescript
     }
 
     /**
@@ -59,7 +64,10 @@ class ContactController extends Controller
      */
     public function edit(Contact $contact)
     {
-        return Inertia::render('Contacts/Edit');
+        // Al traer $contact me trae el registro con el id llamado
+        // return $contact ;
+        // lo pasamos a la vista con el metodo compact
+        return Inertia::render('Contacts/Edit', compact('contact'));
     }
 
     /**
