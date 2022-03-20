@@ -17,7 +17,8 @@ class ContactController extends Controller
     public function index()
     {
         // Pasando datos para la vista, crea la variable
-        $contacts = Contact::all();
+        // Con all trae todo, con with y get permite traer en un array las relaciones
+        $contacts = Contact::with('organization')->get();
 
         // pasa los datos como segundo parametro con compact que crea un array de lo obtenido del modelo
         return Inertia::render('Contacts/Index', compact('contacts'));
