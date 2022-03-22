@@ -18,7 +18,8 @@ class ContactController extends Controller
     {
         // Pasando datos para la vista, crea la variable
         // Con all trae todo, con with y get permite traer en un array las relaciones
-        $contacts = Contact::with('organization')->get();
+        // Usar paginate para traer solamente 15 registros por default y los datos de paginacion
+        $contacts = Contact::with('organization')->paginate();
 
         // pasa los datos como segundo parametro con compact que crea un array de lo obtenido del modelo
         return Inertia::render('Contacts/Index', compact('contacts'));

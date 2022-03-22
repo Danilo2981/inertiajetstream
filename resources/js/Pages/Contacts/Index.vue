@@ -55,7 +55,8 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-for="contact in contacts" :key="contact.id">
+                                        <!-- Con get = array, con paginate se trae el ojeto data y se itera como un Objeto -->
+                                        <tr v-for="contact in contacts.data" :key="contact.id">
                                             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                                 <div class="flex items-center">
                                                 <div class="flex-shrink-0 w-10 h-10">
@@ -107,20 +108,10 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
-                                    <span class="text-xs xs:text-sm text-gray-900">
-                                        Showing 1 to 4 of 50 Entries
-                                    </span>
-                                    <div class="inline-flex mt-2 xs:mt-0">
-                                        <button class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-l">
-                                            Prev
-                                        </button>
-                                        &nbsp; &nbsp;
-                                        <button class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-r">
-                                            Next
-                                        </button>
-                                    </div>    
-                                </div>
+                                
+                                <!-- Cambiar de otra pagina contacts por users o etc -->
+                                <pagination :pagination="contacts"></pagination>
+                                
                             </div>    
                         </div>    
                     </div>  
@@ -132,16 +123,18 @@
 <script>
 
 import AppLayout from '@/Layouts/AppLayout.vue'
-
+import Pagination from '@/Components/Pagination.vue'
 export default {
     components: {
         AppLayout,
+        Pagination,
     },
     // pasamos los datos obtenidos del model a traves del controlador, y con typescript especificando el 
     // nombre del parametro y el tipo a recibir
     props: {
+        // Con get = array, con paginate se trae el ojeto data y se itera como un Objeto
         contacts: {
-            type: Array,
+            type: Object,
             required: true,
         }
     }
