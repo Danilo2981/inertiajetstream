@@ -6,16 +6,16 @@
             <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> Next </a>
         </div>
         <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-            <div>
-            <p class="text-sm text-gray-700">
-                Showing
-                <span class="font-medium">1</span>
-                to
-                <span class="font-medium">10</span>
-                of
-                <span class="font-medium">97</span>
-                results
-            </p>
+            <div v-show="pagination">
+                <p class="text-sm text-gray-700">
+                    Showing
+                    <span class="font-medium"> {{ (pagination.current_page * pagination.per_page) - (pagination.per_page - 1) }} </span>
+                    to
+                    <span class="font-medium"> {{ pagination.to }} </span>
+                    of
+                    <span class="font-medium"> {{ pagination.total }} </span>
+                    results
+                </p>
             </div>
             <div>
                 <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
@@ -30,7 +30,6 @@
                             :class="link.active ? 'z-10 bg-indigo-50 border-indigo-500 text-indigo-600' : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'"
                             v-html="link.label" />
                     </template>
-
                 </nav>
             </div>
         </div>

@@ -20,7 +20,7 @@ class ContactController extends Controller
         // Con all trae todo, con with y get permite traer en un array las relaciones
         // Usar paginate para traer solamente 15 registros por default y los datos de paginacion
         $contacts = Contact::with('organization')->paginate();
-
+        
         // pasa los datos como segundo parametro con compact que crea un array de lo obtenido del modelo
         return Inertia::render('Contacts/Index', compact('contacts'));
         // estos datos tienen que pasarse a la vista Vue como props, y tapescript
