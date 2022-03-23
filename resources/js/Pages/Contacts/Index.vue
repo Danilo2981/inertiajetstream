@@ -10,21 +10,17 @@
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white p-8 rounded-m w-full">
                     <div class="flex items-center justify-between ph-6">
-                        <div>
-                            <h2 class="text-gray-600 font-semibold">Contacts</h2>
-			                <span class="text-xs">All contacts</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div class="flex bg-gray-50 items-center p-2 rounded-md">
+                        <div class="flex items-center justify-between w-full">
+                            <!-- <div class="flex bg-gray-50 items-center p-2 rounded-md">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd"
                                     d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                                     clip-rule="evenodd" />
 				                </svg>
-				                <input class="bg-gray-50 outline-none ml-1 block " type="text" name="" id="" placeholder="search...">
-                            </div>
+                                
+                            </div> -->
+                            <Input type="text" class="w-full" />
                             <div class="lg:ml-40 ml-10 space-x-8">
-                                <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">New Report</button>
                                 <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Create</button>
                             </div>
                         </div>
@@ -124,10 +120,13 @@
 
 import AppLayout from '@/Layouts/AppLayout.vue'
 import Pagination from '@/Components/Pagination.vue'
+import Input from '@/Jetstream/Input.vue'
+
 export default {
     components: {
         AppLayout,
         Pagination,
+        Input,
     },
     // pasamos los datos obtenidos del model a traves del controlador, y con typescript especificando el 
     // nombre del parametro y el tipo a recibir
