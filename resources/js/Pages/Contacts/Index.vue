@@ -19,7 +19,7 @@
 				                </svg>
                                 
                             </div> -->
-                            <Input type="text" class="w-full" />
+                            <Input v-model="search" type="text" class="w-full" placeholder="Ingrese texto a buscar" />
                             <div class="lg:ml-40 ml-10 space-x-8">
                                 <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Create</button>
                             </div>
@@ -121,12 +121,30 @@
 import AppLayout from '@/Layouts/AppLayout.vue'
 import Pagination from '@/Components/Pagination.vue'
 import Input from '@/Jetstream/Input.vue'
+// pickBy hace que si el valor es null no se pase lo de watch a la ruta
+import pickBy from 'lodash/pickBy'
 
 export default {
     components: {
         AppLayout,
         Pagination,
         Input,
+    },
+    // creamos una propiedad que sea inicializada como una cadena que es recuperada por filters
+    data() {
+        return {
+            search: this.filters.search,
+        }
+    },
+    // mantenemos a la escucha de todo lo de search y campture el valor por el que cambio
+    // con this.inertia se refresca los datos y no la pagina
+    // luego se lo pasa por la ruta el valor a la propiedad search y se mantiende todo lo que pase con preserveState
+    watch: {
+        // con esto logramos que se ponga en la ruta lo digitado en el input http://labinertia.test/contacts?search=Spinka
+        // informacion que se pasa al controlador
+        search($value) {
+            this.$inertia.get('/contacts', pickBy({ search: $value }), { preserveState: true })
+        }
     },
     // pasamos los datos obtenidos del model a traves del controlador, y con typescript especificando el 
     // nombre del parametro y el tipo a recibir
@@ -135,7 +153,8 @@ export default {
         contacts: {
             type: Object,
             required: true,
-        }
+        },
+        filters: Object,
     }
 }
 </script>

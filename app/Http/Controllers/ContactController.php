@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Contact;
 use App\Http\Requests\StoreContactRequest;
 use App\Http\Requests\UpdateContactRequest;
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class ContactController extends Controller
@@ -14,15 +15,22 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        // Para filtrar todos los campos posibles se usa Request, y creamos la variable filters
+        // en la cual capturamos los que se a enviado por el Request en el campo search
+        $filters = $request->all('search');
+
         // Pasando datos para la vista, crea la variable
         // Con all trae todo, con with y get permite traer en un array las relaciones
         // Usar paginate para traer solamente 15 registros por default y los datos de paginacion
-        $contacts = Contact::with('organization')->paginate();
+        $contacts = Contact::with('organization')
+                    // llamamos al scopeFilter referenciado en el modelo Contact
+                    ->filter($filters)
+                    ->paginate();
         
         // pasa los datos como segundo parametro con compact que crea un array de lo obtenido del modelo
-        return Inertia::render('Contacts/Index', compact('contacts'));
+        return Inertia::render('Contacts/Index', compact('contacts', 'filters'));
         // estos datos tienen que pasarse a la vista Vue como props, y tapescript
     }
 

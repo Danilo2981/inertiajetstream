@@ -32,4 +32,19 @@ class Contact extends Model
     public function organization() {
         return $this->belongsTo(Organization::class);
     }
+
+    // Query Scope funcion para filtrar contactos
+    public function scopeFilter($query, $filters){
+        $query->when( $filters['search'] ?? null, function($query, $search){
+            $query->where('first_name', 'LIKE', "%" . $search . "%")
+                    ->orWhere('last_name', 'LIKE', "%" . $search . "%")
+                    ->orWhere('city', 'LIKE', "%" . $search . "%")
+                    ->orWhere('phone', 'LIKE', "%" . $search . "%")
+                    ->orWhere('email', 'LIKE', "%" . $search . "%")
+                    // trae el filtro de la relacion
+                    ->orWhereHas('organization', function($query) use ($search){
+                        $query->where('name', 'LIKE', "%" . $search . "%");
+                    });
+        });
+    }
 }

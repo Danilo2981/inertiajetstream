@@ -1,15 +1,15 @@
 <template lang="">
         <!-- This example requires Tailwind CSS v2.0+ -->
-    <div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+    <div v-if="pagination.links.length > 3" class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
         <div class="flex-1 flex justify-between sm:hidden">
             <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> Previous </a>
             <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"> Next </a>
         </div>
         <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-            <div v-show="pagination">
+            <div>
                 <p class="text-sm text-gray-700">
                     Showing
-                    <span class="font-medium"> {{ (pagination.current_page * pagination.per_page) - (pagination.per_page - 1) }} </span>
+                    <span class="font-medium"> {{ pagination.from }} </span>
                     to
                     <span class="font-medium"> {{ pagination.to }} </span>
                     of
