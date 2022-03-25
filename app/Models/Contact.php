@@ -15,7 +15,7 @@ class Contact extends Model
         'organization_id',
         'email',
         'phone',
-        'adress',
+        'address',
         'city',
         'state',
         'country_id',

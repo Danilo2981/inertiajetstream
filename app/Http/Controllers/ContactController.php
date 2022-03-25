@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Contact;
 use App\Http\Requests\StoreContactRequest;
 use App\Http\Requests\UpdateContactRequest;
+use App\Models\Country;
+use App\Models\Organization;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -27,6 +29,7 @@ class ContactController extends Controller
         $contacts = Contact::with('organization')
                     // llamamos al scopeFilter referenciado en el modelo Contact
                     ->filter($filters)
+                    ->latest('id')
                     ->paginate();
         
         // pasa los datos como segundo parametro con compact que crea un array de lo obtenido del modelo
@@ -41,7 +44,11 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Contacts/Create');
+        // Rescatamos las variables de las relaciones
+        $organizations = Organization::all();
+        $countries = Country::all();
+
+        return Inertia::render('Contacts/Create', compact('organizations', 'countries'));
     }
 
     /**
@@ -50,9 +57,23 @@ class ContactController extends Controller
      * @param  \App\Http\Requests\StoreContactRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreContactRequest $request)
+    public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'organization_id' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'country_id' => 'required',
+            'postal_code' => 'required'
+        ]);
+
+        $contact = Contact::create($data);
+        return redirect()->route('contacts.edit', $contact);
     }
 
     /**
@@ -74,10 +95,14 @@ class ContactController extends Controller
      */
     public function edit(Contact $contact)
     {
+        // Rescatamos las variables de las relaciones
+        $organizations = Organization::all();
+        $countries = Country::all();
+
         // Al traer $contact me trae el registro con el id llamado
         // return $contact ;
         // lo pasamos a la vista con el metodo compact
-        return Inertia::render('Contacts/Edit', compact('contact'));
+        return Inertia::render('Contacts/Edit', compact('contact', 'organizations', 'countries'));
     }
 
     /**
@@ -87,9 +112,24 @@ class ContactController extends Controller
      * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateContactRequest $request, Contact $contact)
+    public function update(Request $request, Contact $contact)
     {
-        //
+        $data = $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'organization_id' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'country_id' => 'required',
+            'postal_code' => 'required'
+        ]);
+
+        $contact->update($data);
+
+        return redirect()->route('contacts.edit', $contact);
     }
 
     /**
@@ -100,6 +140,8 @@ class ContactController extends Controller
      */
     public function destroy(Contact $contact)
     {
-        //
+        $contact->delete();
+
+        return redirect()->route('contacts.index');
     }
 }
