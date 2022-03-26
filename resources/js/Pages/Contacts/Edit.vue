@@ -98,8 +98,6 @@
                     <button class="btn btn-red mr-3" @click="destroy">
                         Eliminar
                     </button>
-                </div>
-                <div class="flex justify-end mt-3">
                     <button class="btn btn-indigo" @click="upadate">
                         Actualizar
                     </button>
