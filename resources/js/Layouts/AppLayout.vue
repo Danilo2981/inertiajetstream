@@ -22,7 +22,7 @@
                                 <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </jet-nav-link>
-                                <jet-nav-link :href="route('tailwind')" :active="route().current('tailwind')">
+                                <jet-nav-link :href="route('grid')" :active="route().current('grid')">
                                     Tailwind
                                 </jet-nav-link>
                                 <!-- .* permite poner como active cualquier ruta que contenga contacts -->

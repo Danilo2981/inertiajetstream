@@ -33,6 +33,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/tailwind', function () {
-    return Inertia::render('Tailwind');
-})->name('tailwind');
+Route::middleware(['auth:sanctum', 'verified'])->get('/grid', function () {
+    return Inertia::render('Tailwind/Grid');
+})->name('grid');

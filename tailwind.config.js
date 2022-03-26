@@ -10,6 +10,14 @@ module.exports = {
     ],
 
     theme: {
+        // Fuente referida en resources/app.css en array poner nombre fuente de Google Font
+        fontFamily:{
+            'popi': ['Poppins']
+        },
+        // Aca se puede establecer que los contenedores siempre esten centrados
+        container: {
+            center: true,
+        },
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
