@@ -16,6 +16,24 @@
         <!-- Scripts -->
         @routes
         <script src="{{ mix('js/app.js') . '?version=' . Str::random() }}" defer></script>
+
+        {{-- Imagen para utilizar de background --}}
+        <style>
+            .imagen {
+                background-image: url("{{ asset('img/coding-man.jpg') }}");
+                height: 400px;
+                width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .imagen1 {
+                background-image: url("{{ asset('img/beautiful-pet-portrait-of-dog.jpg') }}");
+                height: 400px;
+                width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
     </head>
     <body class="font-sans antialiased">
         @inertia

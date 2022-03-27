@@ -7,7 +7,7 @@
         </template>
 
         <div class="container py-12">
-            <h1>GRID</h1>
+            <h1 class="text-center text-3xl font-bold">GRID</h1>
         </div>
         <!-- Container determina el tamaño 
         
@@ -97,7 +97,7 @@
         </div>
 
         <div class="container py-12">
-            <h1>TIPOGRAFIA</h1>
+            <h1 class="text-center text-3xl font-bold">TIPOGRAFIA</h1>
         </div>
 
         <div class="container">
@@ -160,6 +160,42 @@
             <p class="capitalize">danilo miguel vega lopez</p>
         </div>
 
+        <div class="container py-12">
+            <h1 class="text-center text-3xl font-bold">BACKGROUND</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam quo officia facere iusto, iure aliquam sint enim in et excepturi expedita dolorem porro nesciunt accusantium esse veritatis unde eaque maxime.</P>
+            <!-- bg-contain hace que la imagen utilice lo referido en la clase imagen -->
+            <!-- bg-no-repeat se usa con bg-contain -->
+            <!-- bg-cover hace que se muestre la imagen desde le lado izquierdo -->
+            <!-- Con bg-cover bg-right hace que la imagen se muestre desde el lado derecho -->
+            <!-- bg-clip-content permite poner pading del border -->
+            <div class="imagen bg-cover bg-right border-8 border-blue-600 border-dashed bg-clip-content p-4"></div>
+        </div>
+
+        <div class="container">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam quo officia facere iusto, iure aliquam sint enim in et excepturi expedita dolorem porro nesciunt accusantium esse veritatis unde eaque maxime.</P>
+            <!-- bg-fixed fija la imagen hace que ocupe todo el ancho y se queda en la vista a lo que se hace scroll -->
+            <div class="imagen1 bg-cover bg-fixed"></div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque temporibus nam cupiditate tempore expedita, ducimus a consequuntur eligendi molestiae, modi accusantium! Iste, sapiente maiores delectus eligendi dolorem ducimus sunt asperiores?</p>
+            <p>Vero eos velit temporibus. Modi deleniti porro quibusdam rerum ipsum nulla, similique alias dicta consequatur doloribus sed laudantium, fugiat sit temporibus, tempora esse quisquam accusamus ratione eveniet fuga vero ut!</p>
+            <p>Fugit quos laboriosam deserunt quia nulla facere repellendus quidem quae nemo laborum! Distinctio enim in expedita odit optio perferendis cumque reprehenderit vel repudiandae atque molestiae cum, vitae officiis rerum labore.</p>
+            <p>Aspernatur possimus numquam deserunt ratione ea perferendis architecto in recusandae hic vero. Expedita dolore, commodi, at in aperiam consequatur magni, voluptas necessitatibus nisi soluta quos repudiandae cumque atque quisquam ad.</p>
+            <p>Repudiandae id consequatur corrupti eos facere fugit amet, soluta veritatis minima cupiditate blanditiis quaerat dolorem obcaecati, aliquam, molestias eligendi libero iusto natus optio. Porro animi repudiandae, vitae ea quaerat laboriosam.</p>
+            <p>Dolor tempora atque magnam voluptatem laudantium id! Asperiores nulla sint enim odio officiis. Dolorum porro explicabo sequi similique repellat ab, voluptatibus tenetur tempora ducimus nemo hic modi sint minus nihil.</p>
+            <p>Laudantium est quae numquam magnam? At velit voluptatibus nobis sapiente officia, temporibus incidunt architecto ipsam dicta repellendus dignissimos provident, rerum ab alias voluptatem nisi molestiae, libero a quia dolores ut.</p>
+            <p>Sunt impedit quis aut excepturi nesciunt. Vero voluptatem repellat corrupti non fugiat distinctio asperiores porro veritatis eos soluta modi ipsam odio cum praesentium cumque deserunt qui perferendis animi, rem tempora!</p>
+            <p>Sunt nobis est ad. Sed tempora suscipit nisi vero earum, distinctio quam sunt velit iure ab ut esse ducimus, reiciendis sit soluta? Aliquid, cum obcaecati. Nostrum molestiae facere aut tenetur.</p>
+            <p>Magni eveniet inventore fuga quibusdam, culpa quia deleniti similique placeat velit dolore mollitia accusantium qui, quod nesciunt quo ad libero ipsum exercitationem molestias quisquam, beatae maxime? Vitae iusto ea natus?</p>
+        </div>
+
+        <div class="container py-12">
+            <h1 class="text-center text-3xl font-bold">DEGRADARO</h1>
+            <div class="bg-gradient-to-r from-blue-500 via-green-600 to-yellow-400 text-center text-5xl font-bold">
+                Hola mundo
+            </div>
+            <div class="bg-gradient-to-r from-blue-500 via-green-600 to-yellow-400 text-center text-5xl font-bold bg-clip-text text-transparent">
+                Hola mundo
+            </div>
+        </div>
 
     </app-layout>
 </template>

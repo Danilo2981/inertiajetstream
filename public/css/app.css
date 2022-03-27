@@ -1175,9 +1175,6 @@ select{
 .list-inside{
   list-style-position: inside;
 }
-.list-outside{
-  list-style-position: outside;
-}
 .list-disc{
   list-style-type: disc;
 }
@@ -1300,6 +1297,9 @@ select{
 .border-2{
   border-width: 2px;
 }
+.border-8{
+  border-width: 8px;
+}
 .border-b-2{
   border-bottom-width: 2px;
 }
@@ -1314,6 +1314,9 @@ select{
 }
 .border-r{
   border-right-width: 1px;
+}
+.border-dashed{
+  border-style: dashed;
 }
 .border-gray-300{
   --tw-border-opacity: 1;
@@ -1341,6 +1344,10 @@ select{
 .border-indigo-500{
   --tw-border-opacity: 1;
   border-color: rgb(99 102 241 / var(--tw-border-opacity));
+}
+.border-blue-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(37 99 235 / var(--tw-border-opacity));
 }
 .bg-white{
   --tw-bg-opacity: 1;
@@ -1433,11 +1440,43 @@ select{
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
+.bg-gradient-to-r{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+.from-blue-500{
+  --tw-gradient-from: #3b82f6;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(59 130 246 / 0));
+}
+.via-green-600{
+  --tw-gradient-stops: var(--tw-gradient-from), #16a34a, var(--tw-gradient-to, rgb(22 163 74 / 0));
+}
+.to-yellow-400{
+  --tw-gradient-to: #facc15;
+}
 .bg-cover{
   background-size: cover;
 }
+.bg-contain{
+  background-size: contain;
+}
+.bg-fixed{
+  background-attachment: fixed;
+}
+.bg-clip-padding{
+  background-clip: padding-box;
+}
+.bg-clip-content{
+  background-clip: content-box;
+}
+.bg-clip-text{
+  -webkit-background-clip: text;
+          background-clip: text;
+}
 .bg-center{
   background-position: center;
+}
+.bg-right{
+  background-position: right;
 }
 .bg-no-repeat{
   background-repeat: no-repeat;
@@ -1454,6 +1493,9 @@ select{
 }
 .p-8{
   padding: 2rem;
+}
+.p-4{
+  padding: 1rem;
 }
 .px-4{
   padding-left: 1rem;
@@ -1595,6 +1637,10 @@ select{
   font-size: 3.75rem;
   line-height: 1;
 }
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
 .font-medium{
   font-weight: 500;
 }
@@ -1604,14 +1650,14 @@ select{
 .font-bold{
   font-weight: 700;
 }
+.font-thin{
+  font-weight: 100;
+}
 .font-light{
   font-weight: 300;
 }
 .font-black{
   font-weight: 900;
-}
-.font-thin{
-  font-weight: 100;
 }
 .uppercase{
   text-transform: uppercase;
@@ -1731,6 +1777,9 @@ select{
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
 }
+.text-transparent{
+  color: transparent;
+}
 .text-opacity-60{
   --tw-text-opacity: 0.6;
 }
@@ -1760,6 +1809,9 @@ select{
 }
 .opacity-25{
   opacity: 0.25;
+}
+.opacity-70{
+  opacity: 0.7;
 }
 .shadow-sm{
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
