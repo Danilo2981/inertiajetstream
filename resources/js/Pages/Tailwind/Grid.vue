@@ -197,6 +197,26 @@
             </div>
         </div>
 
+        <div class="container py-12">
+            <h1 class="text-center text-3xl font-bold">BORDES</h1>
+                <!-- rounded full redondea al cuadrado -->
+            <div class="w-64 h-64 bg-gray-500 border-8 border-blue-800 rounded-full"></div>
+                <!-- divide pone lineas de division en las listas o proyectos -->
+            <div class="divide-y-8 divide-gray-600 divide-dashed">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus accusantium laboriosam exercitationem ratione enim id, optio architecto nulla pariatur aut ullam error nam iure excepturi dolores. Nostrum, magni. Accusantium, aspernatur?</p>
+                <p>Modi veniam, sed rem minus repellendus voluptas nobis porro, adipisci eveniet expedita eum deleniti quo sapiente possimus corporis a ea ducimus quos obcaecati eius tenetur? Voluptatum quod praesentium eos in!</p>
+                <p>Laborum quasi sequi, vitae quaerat obcaecati aut illo, quam cumque facilis quod enim expedita ipsam placeat amet deserunt doloribus blanditiis alias saepe aspernatur voluptates quos voluptatem. Placeat voluptatum perspiciatis tempore!</p>
+                <p>Ad dolor eaque odit illum facilis dolorum, amet necessitatibus cupiditate deserunt vel? Consequuntur iste veniam animi rem voluptate a, perferendis aliquam aliquid voluptatem eaque quidem, dolore, odio ut consequatur iure!</p>
+                <p>Quibusdam sed delectus sapiente, aspernatur minima, possimus hic soluta modi iusto esse dolorum pariatur ducimus voluptate quisquam, natus animi atque fugiat repellendus laborum quaerat. Aliquam velit officia quo quisquam harum!</p>
+            </div>
+            <nav class="divide-x-2 divide-gray-400">
+                <a href="" class="">Link 1</a>
+                <a href="" class="">Link 2</a>
+                <a href="" class="">Link 3</a>
+                <a href="" class="">Link 4</a>
+                <a href="" class="">Link 5</a>
+            </nav>
+        </div>
     </app-layout>
 </template>
 
