@@ -8,4 +8,5 @@
 /* Custom CSS */
 @import 'buttons.css';
 @import 'common.css';
-@import 'forms.css'
+@import 'forms.css';
+@import 'tables.css';

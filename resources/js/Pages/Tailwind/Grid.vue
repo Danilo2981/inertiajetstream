@@ -217,6 +217,38 @@
                 <a href="" class="">Link 5</a>
             </nav>
         </div>
+
+        <div class="container py-12">
+            <h1 class="text-center text-3xl font-bold">TABLAS</h1>
+            <!-- w-fixed permite setear en cada th con w-1/4 w-1/2 -->
+            <table class="table w-full border-separate lg:border-collapse table-fixed">
+                <thead>
+                    <tr>
+                        <th class="w-1/4">Pais</th>
+                        <th class="w-1/4">Ciudad</th>
+                        <th class="w-1/2">Descripcion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Peru</td>
+                        <td>Lima</td>
+                        <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel iure consequuntur, in non nobis veritatis perferendis? Quidem assumenda, repellendus cum exercitationem molestiae praesentium, rem, illo delectus aliquid molestias omnis ab.</td>
+                    </tr>
+                    <tr>
+                        <td>Colombia</td>
+                        <td>Bogota</td>
+                        <td>Fugiat repudiandae nobis amet illum in dolorem nam iure, deleniti ab labore recusandae molestias exercitationem ratione pariatur reprehenderit. Officiis aut molestias dolorum ullam qui saepe hic quia laudantium non sit!</td>
+                    </tr>
+                    <tr>
+                        <td>Ecuador</td>
+                        <td>Quito</td>
+                        <td>Et ullam amet possimus fugit, quo perferendis aliquid vitae eligendi mollitia accusantium consequuntur porro ex commodi cupiditate pariatur odio illum, dolorum hic. Architecto molestias hic neque aspernatur a, maiores non.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </app-layout>
 </template>
 
