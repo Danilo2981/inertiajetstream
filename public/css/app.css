@@ -1067,6 +1067,12 @@ select{
 .h-64{
   height: 16rem;
 }
+.h-screen{
+  height: 100vh;
+}
+.h-32{
+  height: 8rem;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -1120,6 +1126,14 @@ select{
 }
 .w-1\/2{
   width: 50%;
+}
+.w-max{
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.w-screen{
+  width: 100vw;
 }
 .min-w-0{
   min-width: 0px;
@@ -1479,6 +1493,14 @@ select{
 .bg-blue-900{
   --tw-bg-opacity: 1;
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+}
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-green-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
@@ -2382,6 +2404,9 @@ en Tailwind por defecto  */
   .md\:grid{
     display: grid;
   }
+  .md\:w-3\/4{
+    width: 75%;
+  }
   .md\:list-disc{
     list-style-type: disc;
   }
@@ -2414,6 +2439,9 @@ en Tailwind por defecto  */
   }
   .lg\:col-span-3{
     grid-column: span 3 / span 3;
+  }
+  .lg\:w-1\/2{
+    width: 50%;
   }
   .lg\:border-collapse{
     border-collapse: collapse;

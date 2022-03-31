@@ -249,6 +249,23 @@
             </table>
         </div>
 
+        <div class="container py-12">
+            <h1 class="text-center text-3xl font-bold">SIZES</h1>
+            <div class="bg-blue-600 h-64">
+                <!-- h-full hace que tenga el tamaño de la caja padre -->
+                <!-- w-max hasta cuanto puede crecer la caja hija -->
+                <div class="bg-red-600 h-full w-full md:w-3/4 lg:w-1/2"></div>
+            </div>
+        </div>
+
+        <div class="container py-12">
+            <div class="bg-green-600 h-32 w-screen"></div>
+        </div>
+
+        <!-- SIDEBAR -->
+            <!-- h-screen hace que tome todo el alto de la pantall -->
+        <div class="bg-black w-64 h-screen"></div>
+
     </app-layout>
 </template>
 
