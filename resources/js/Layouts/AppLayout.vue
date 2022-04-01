@@ -23,7 +23,10 @@
                                     Dashboard
                                 </jet-nav-link>
                                 <jet-nav-link :href="route('grid')" :active="route().current('grid')">
-                                    Tailwind
+                                    Grid Tailwind
+                                </jet-nav-link>
+                                <jet-nav-link :href="route('layout')" :active="route().current('layout')">
+                                    Layout Tailwind
                                 </jet-nav-link>
                                 <!-- .* permite poner como active cualquier ruta que contenga contacts -->
                                 <jet-nav-link :href="route('contacts.index')" :active="route().current('contacts.*')">

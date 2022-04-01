@@ -263,7 +263,7 @@
         </div>
 
         <!-- SIDEBAR -->
-            <!-- h-screen hace que tome todo el alto de la pantall -->
+            <!-- h-screen hace que tome todo el alto de la pantalla -->
         <div class="bg-black w-64 h-screen"></div>
 
     </app-layout>
