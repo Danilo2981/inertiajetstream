@@ -14,6 +14,9 @@
                 <div class="bg-gray-500 h-full w-full">
                 </div>
             </div>
+        </div>
+        
+        <div class="container mt-4">
             <div class="bg-gray-300 w-64 h-32 p-8 border-8 border-gray-500 box-content">
                 <!-- Box content permite que se mantenga el w-64 y h-32 del padre en el hijo y se hace mas grande  -->
                 <div class="bg-gray-500 h-full w-full">
@@ -21,6 +24,26 @@
             </div>
         </div>
 
+        <div class="container mt-4">
+            <h1>Block</h1>
+            <div class="bg-gray-400 text gray-700 text-center px-4 py-2 block">1</div>
+            <div class="bg-gray-400 text gray-700 text-center px-4 py-2 my-2 block">2</div>
+            <div class="bg-gray-400 text gray-700 text-center px-4 py-2 block">3</div>
+        </div>
+
+        <h1>Inline no permite margin y pading en el eje y </h1>
+        <div class="container mt-4 bg-blue-400">            
+            <div class="bg-gray-400 text gray-700 text-center px-4 py-2 inline">1</div>
+            <div class="bg-gray-400 text gray-700 text-center px-4 py-2 my-2 inline">2</div>
+            <div class="bg-gray-400 text gray-700 text-center px-4 py-2 inline">3</div>
+        </div>
+
+        <h1>Inline-Block permite ponerle margin y pading en el eje y</h1>
+        <div class="container mt-4 bg-blue-400">            
+            <div class="bg-gray-400 text gray-700 text-center px-4 py-2 inline-block">1</div>
+            <div class="bg-gray-400 text gray-700 text-center px-4 py-2 my-2 inline-block">2</div>
+            <div class="bg-gray-400 text gray-700 text-center px-4 py-2 inline-block">3</div>
+        </div>
     </app-layout>
 </template>
 
