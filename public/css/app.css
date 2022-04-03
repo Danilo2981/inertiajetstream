@@ -882,11 +882,23 @@ select{
 .relative{
   position: relative;
 }
+.sticky{
+  position: -webkit-sticky;
+  position: sticky;
+}
 .inset-0{
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
+}
+.inset-x-0{
+  left: 0px;
+  right: 0px;
+}
+.inset-y-0{
+  top: 0px;
+  bottom: 0px;
 }
 .left-0{
   left: 0px;
@@ -896,6 +908,9 @@ select{
 }
 .top-0{
   top: 0px;
+}
+.bottom-0{
+  bottom: 0px;
 }
 .z-0{
   z-index: 0;
@@ -926,6 +941,18 @@ select{
 }
 .row-span-2{
   grid-row: span 2 / span 2;
+}
+.float-right{
+  float: right;
+}
+.float-left{
+  float: left;
+}
+.clear-right{
+  clear: right;
+}
+.clear-both{
+  clear: both;
 }
 .mx-auto{
   margin-left: auto;
@@ -1016,6 +1043,9 @@ select{
 }
 .-ml-3{
   margin-left: -0.75rem;
+}
+.mb-2{
+  margin-bottom: 0.5rem;
 }
 .box-content{
   box-sizing: content-box;
@@ -1309,8 +1339,14 @@ select{
   --tw-divide-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-divide-opacity));
 }
+.overflow-auto{
+  overflow: auto;
+}
 .overflow-hidden{
   overflow: hidden;
+}
+.overflow-scroll{
+  overflow: scroll;
 }
 .overflow-x-auto{
   overflow-x: auto;
@@ -1320,6 +1356,12 @@ select{
 }
 .overflow-y-hidden{
   overflow-y: hidden;
+}
+.overflow-x-scroll{
+  overflow-x: scroll;
+}
+.overflow-y-scroll{
+  overflow-y: scroll;
 }
 .truncate{
   overflow: hidden;
@@ -1524,6 +1566,14 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
+.bg-gray-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+.bg-indigo-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(165 180 252 / var(--tw-bg-opacity));
+}
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
@@ -1565,9 +1615,25 @@ select{
 .bg-no-repeat{
   background-repeat: no-repeat;
 }
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+.object-none{
+  -o-object-fit: none;
+     object-fit: none;
+}
+.object-top{
+  -o-object-position: top;
+     object-position: top;
+}
+.object-bottom{
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 .p-2{
   padding: 0.5rem;
@@ -1673,6 +1739,21 @@ select{
 }
 .pt-8{
   padding-top: 2rem;
+}
+.pt-16{
+  padding-top: 4rem;
+}
+.pl-64{
+  padding-left: 16rem;
+}
+.pt-20{
+  padding-top: 5rem;
+}
+.pl-60{
+  padding-left: 15rem;
+}
+.pl-6{
+  padding-left: 1.5rem;
 }
 .text-left{
   text-align: left;

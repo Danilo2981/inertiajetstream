@@ -28,6 +28,9 @@
                                 <jet-nav-link :href="route('layout')" :active="route().current('layout')">
                                     Layout Tailwind
                                 </jet-nav-link>
+                                <jet-nav-link :href="route('fixed')" :active="route().current('fixed')">
+                                    Fixed Tailwind
+                                </jet-nav-link>
                                 <!-- .* permite poner como active cualquier ruta que contenga contacts -->
                                 <jet-nav-link :href="route('contacts.index')" :active="route().current('contacts.*')">
                                     Contacts
