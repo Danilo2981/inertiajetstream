@@ -44,3 +44,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/layout', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/fixed', function () {
     return Inertia::render('Tailwind/Fixed');
 })->name('fixed');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/sticky', function () {
+    return Inertia::render('Tailwind/Sticky');
+})->name('sticky');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/flex', function () {
+    return Inertia::render('Tailwind/Flex');
+})->name('flex');

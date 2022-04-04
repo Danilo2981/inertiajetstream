@@ -31,6 +31,12 @@
                                 <jet-nav-link :href="route('fixed')" :active="route().current('fixed')">
                                     Fixed Tailwind
                                 </jet-nav-link>
+                                <jet-nav-link :href="route('sticky')" :active="route().current('sticky')">
+                                    Sticky Tailwind
+                                </jet-nav-link>
+                                <jet-nav-link :href="route('flex')" :active="route().current('flex')">
+                                    Flex Tailwind
+                                </jet-nav-link>
                                 <!-- .* permite poner como active cualquier ruta que contenga contacts -->
                                 <jet-nav-link :href="route('contacts.index')" :active="route().current('contacts.*')">
                                     Contacts
