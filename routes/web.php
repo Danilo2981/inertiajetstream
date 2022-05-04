@@ -52,3 +52,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/sticky', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/flex', function () {
     return Inertia::render('Tailwind/Flex');
 })->name('flex');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/google', function () {
+    return Inertia::render('Platzi/Google');
+})->name('google');
