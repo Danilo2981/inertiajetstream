@@ -1,5 +1,5 @@
 <template lang="">
-    <header class="w-full h-16 p-2 text-sm">
+    <header class="w-full h-16 pt-4 text-sm">
         <nav class="flex justify-end">
             <ul class="w-64 h-auto flex justify-center items-center">
                 <li>
@@ -9,10 +9,8 @@
                     <a class="mr-2.5 black" href="">Imagenes</a>
                 </li>
                 <li>
-                    <a class="mr-2.5 flex" href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
+                    <a class="mr-2.5 flex w-7 h-7" href="">
+                        <img src="https://static.thenounproject.com/png/756729-200.png" alt="">
                     </a>
                 </li>
                 <li>

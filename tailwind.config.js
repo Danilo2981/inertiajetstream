@@ -22,6 +22,13 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            spacing: {
+                '528': '33rem',
+                '448': '28rem', 
+            },
+            colors: {
+                'greysi': '#dfe1e5', 
+            },
         },
     },
 
